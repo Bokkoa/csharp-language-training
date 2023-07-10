@@ -1,10 +1,14 @@
-﻿namespace CleanArchitecture.Domain
+﻿using CleanArchitecture.Domain.Common;
+
+namespace CleanArchitecture.Domain
 {
-    public class Streamer
+    public class Streamer: BaseDomainModel
     {
-        public int Id { get; set; }
         public string? Name { get; set; }
         public string? Url { get; set; }
+
+        public List<Video>? Videos { get; set; } // ICollection is an interface, List is a data structure
+        // the interface is implemented in the runtime 
     }
 }
 
